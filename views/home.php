@@ -13,13 +13,12 @@
        //require_once "../Product.php";
        //$products = Product::all();
 
-           foreach($products as $item):
-               ?>
+           foreach($products as $item) : ?>
               
           <tr>
              <td>Identificador: <?php echo $item[0]; ?></td>
              <td>Descripcion: <?php echo $item[1]; ?></td>
-             <td><a href="?method=show&&id=<?= $item[0]?>">Ver Detalles</a></td>
+             <td><a href="show?id=<?= $item[0]?>">Ver Detalles</a></td>
             
 
           </tr>

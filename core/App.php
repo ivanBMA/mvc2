@@ -5,9 +5,10 @@
         uno por defecto => home
         -Si no la url no especifica ninguno metodo => asigno por defecto: index
     */
-
+    echo "<br> hola App";
     class App{
         function __construct(){
+            
             //http://mvc.local/product/show => http://mvc.local/index.php?url=product/show
             
             if(isset($_GET["url"]) && !empty($_GET["url"])){
