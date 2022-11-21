@@ -23,3 +23,23 @@
     
 
     }//fin clase
+
+  namespace Core;
+
+    class Model{
+       protected static function db(){
+        $dsn = "mysql:dbname=demo;host=db";
+        $usuario = "dbuser";
+        $password= "secret";
+            try {
+              $db = new PDO($dsn, $usuario, $password);
+              //Establece el nivel de error que muestra en la conexion
+              $db -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+            } catch (PDOException $e) {
+                echo 'Falló la conexión: ' . $e-> getMessage();
+            }
+            return $db;
+        }
+    }
+
