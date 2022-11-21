@@ -1,5 +1,7 @@
 <?php
 
+    namespace Core;//No poner nada encima ni comentarios
+
     /*
         -Si no la url no especifica ningun controlador (recurso) => asigno
         uno por defecto => home
@@ -38,6 +40,7 @@
             }
 
             //Exite el metodo en el controlador ?
+            $controllerName = "\\app\controllers\$controllerName";
             $controllerObject = new $controllerName();//Objeto de la clase
             if(method_exists($controllerObject,$method)){
                 $controllerObject->$method($arguments);//metodo ok -> lo invoco.

@@ -1,5 +1,7 @@
 <?php
 
+    namespace App\Controllers;
+
     class HomeController{
         function __construct(){
             echo "<br> Contructor clase ProductController";
